@@ -28,6 +28,9 @@ app.use('/api/v1', routes);
 app.use("/api/v1/images/", express.static(path.join(__dirname, '/uploads/assets')));
 
 
+app.get("/", async (req, res) => {
+  res.send("Hello From Bengal POS");
+})
 
 //handle not found route
 app.use((req: Request, res: Response, next: NextFunction) => {
@@ -46,5 +49,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 //global error handler
 app.use(globalErrorHandler);
+
 
 export default app;
