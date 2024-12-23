@@ -21,7 +21,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const http_status_1 = __importDefault(require("http-status"));
 const app = (0, express_1.default)();
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://bengal-pos.netlify.app', 'https://bengal-pos.netlify.app/#/login'],
     credentials: true,
 };
 app.use((0, cors_1.default)(corsOptions));

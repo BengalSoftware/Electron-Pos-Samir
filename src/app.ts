@@ -11,7 +11,7 @@ import httpStatus from 'http-status';
 const app: Application = express();
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://bengal-pos.netlify.app', 'https://bengal-pos.netlify.app/#/login'],
   credentials: true,
 };
 app.use(cors(corsOptions));
